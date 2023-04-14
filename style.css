@@ -32,7 +32,7 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 100%;
 }
 
 /* ---  Groups & Items --- */
@@ -55,14 +55,20 @@ main img {
 
 header {
   background-color: #83092e;
-  padding: 20px 20px 0 20px;
+  padding: 20px 20px 5px 20px;
   text-align: center;
+
+
 }
 
 .logo {
   font-family: "Tangerine", cursive;
   font-size: 72px;
   color: #ecdbc9;
+}
+header nav ul {
+  display: flex;
+  justify-content:center;
 }
 
 header nav ul li {
@@ -79,15 +85,25 @@ header nav ul li a:hover {
   color: #bdbdbd;
   text-decoration: none;
 }
-
+/* adjust join title */
+main section .info {
+  font-size: 150%;
+  text-align: center;
+  padding: 3% 0;
+}
 /* -------  Join Form ------- */
 form {
   border: 2px solid #6b1a22;
   padding: 10px;
+  color: #6b1a22
 }
 
 form label {
   font-weight: bold;
+}
+form .your-email,.your-password,.your-username,.your-gender{
+  display: flex;
+  justify-content: space-between;
 }
 
 form select,
@@ -118,3 +134,35 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+@media all and (min-width:480px){
+  /* adjust header */
+  header {
+    display: flex;
+    justify-content: space-between;
+  } 
+
+  .logo {
+    font-size:48px;
+    margin:0;
+    padding: 10px;
+  } 
+  header nav ul {
+    margin:0;
+    padding:15% 0 0 0;
+  }
+  .group{
+    flex-direction: row;
+    align-items: center;
+  }
+
+  /* .alternate-background p{
+    flex:2;
+  } */ 
+  /* .group {
+    flex-direction: row;
+  }
+   */
+ 
+
+
+} 
